@@ -1,0 +1,338 @@
+.widget {
+	//margin: 0 0 1.5em;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		//max-width: 100%;
+	}
+}
+
+//WIDGET STYLES
+
+#secondary {
+  position: relative;
+  padding: 1.8em 1.4em 0px;
+  background-color: #EDEDED;
+  @include breakpoint(min-width 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1.8em;
+  } //breakpoint(min-width 768px)
+
+  //GENERAL FOR ALL WIDGETS
+  .widget {
+    margin: 0px 0px 1.5em 0px;
+    padding: 1.8em;
+    background: #FFFFFF;
+    @include breakpoint(min-width 768px) {
+      float: left;
+      width: 300px;
+      margin: 0px 0.9em 1.8em;
+    } //breakpoint(min-width 768px)
+    .widget-title {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      @include font-size(1.4);
+      text-transform: uppercases;
+      font-weight: 300;
+    } //.widget-title
+    ul,
+    ol {
+      padding: 0.7em 0px 0px;
+      margin: 0px;
+      list-style-type: none;
+    } //ul, ol
+    ul {
+      li {
+        list-style-type: none;
+        display: block;
+        &:last-child {
+          padding-bottom: 0.35em;
+        } //&:last-child
+        ul,
+        ol {
+          margin-left: 0.5em;
+        } //ul, ol (2nd level)
+        @include breakpoint(min-width 768px) {
+          ul,
+          ol {
+            margin-left: 1em;
+          } //ul, ol (2nd level)
+        } //breakpoint(min-width 768px)
+      } //li
+    } //ul
+    ol {
+      li {
+        list-style-type: none;
+        display: block;
+        &:last-child {
+          padding-bottom: 0.35em;
+        } //&:last-child
+        ul,
+        ol {
+          margin-left: 0.5em;
+        } //ul, ol (2nd level)
+        @include breakpoint(min-width 768px) {
+          ul,
+          ol {
+            margin-left: 1em;
+          } //ul, ol (2nd level)
+        } //breakpoint(min-width 768px)
+      } //li
+    } //ol
+    a {
+      font-weight: 400;
+      text-decoration: none;
+      @include font-size(1.1);
+      border-bottom: 1px dashed #C3C3C3;
+      &:hover,
+      &:focus {
+        color: $magentadark;
+        border-color: $magentadark;
+      } //&:hover, &:focus
+    } //a
+    select {
+      width: 100%;
+      padding: 0.5em;
+    } //select
+  } //.widget
+
+  //ARCHIVE AND CATEGORY
+  .widget_archive {
+    li {
+      color: $grey;
+    } //li
+  } //.widget_archive
+  .widget_categories {
+    .children {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    } //.children
+  } //.widget_categories
+
+  //SEARCH WIDGETS
+  .widget_search {
+    .search-submit {
+      display: none;
+    } //.search-submit
+    input[type="search"] {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0.5em 1em;
+      border: 1px solid #C3C3C3;
+    }
+  } //.widget_search
+
+  //PAGES AND MENU WIDGETS
+  .widget_pages {
+    .children {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    } //.children
+    a {
+      display: block;
+      padding: 1em 0px;
+    } //a
+    li {
+      padding: 0px;
+      &:last-child {
+        margin-bottom: 0.5em;
+      } //&:last-child
+    } //li
+  } //.widget_pages
+  .widget_nav_menu {
+    .sub-menu {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    } //.sub-menu
+    a {
+      display: block;
+      padding: 1em 0px;
+    } //a
+    li {
+      padding: 0px;
+      &:last-child {
+        margin-bottom: 0.5em;
+      } //&:last-child
+    } //li
+  } //.widget_nav_menu
+
+  //RSS WIDGETS
+  .widget_rss {
+    li {
+      margin-bottom: 1em;
+      a {
+         &.rsswidget {
+           padding-right: 0.5em;
+           @include font-size(1);
+           line-height: 1.4em;
+         } //&.rsswidget
+      } //a
+      .rss-date {
+        color: $greydark;
+        @include font-size(1);
+      } //.rss-date
+      cite {
+        color: $greydark;
+        @include font-size(1);
+      } //cite
+      .rssSummary {
+        padding: 0.5em 0px;
+        @include font-size(0.9);
+        line-height: 1.4;
+      }
+    } //li
+  } //.widget_rss
+
+  //CALENDAR
+  .widget_calendar {
+    .calendar_wrap {
+      caption {
+        padding: 0.5em 0px;
+        @include font-size(1.1);
+        font-weight: 400;
+        text-align: left;
+      } //caption
+      thead {
+        background: #333;
+        color: #FFFFFF;
+        th {
+          border-bottom-width: 2px;
+          border: none;
+          text-align: center;
+        } //th
+      } //thead
+      tbody {
+        tr {
+          td {
+            text-align: center;
+          } //td
+        } //tr
+        .pad {
+          background: #EAEAEA;
+        } //.pad
+      } //tbody
+      tfoot {
+        td {
+          padding: 0.2em;
+          @include font-size(0.9);
+          text-align: center;
+          background: #D6D6D6;
+          border: 3px solid #FFFFFF;
+        } //td
+      } //tfoot
+    } //.calendar_wrap
+  } //.widget_calendar
+
+  //TEXT WIDGETS
+  .textwidget {
+    @include font-size(0.9);
+    line-height: 1.6em;
+  } //.textwidget
+
+  //RECENT COMMENTS & RECENT POSTS WIDGETS
+  .widget_recent_comments {
+    ul {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+      li {
+        position: relative;
+        padding: 0px 0px 1em 50px;
+        margin-bottom: 2em;
+        border-bottom: 1px solid #C3C3C3;
+        &:last-child {
+          margin-bottom: 1em;
+          border-bottom: none;
+          padding-bottom: 0px;
+        } //&:last-child
+        a {
+          display: block;
+          @include font-size(1.1);
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          } //&:hover, &:focus
+        } //a
+        &:before {
+          display: block;
+          float: left;
+          padding-top: 0.3em;
+          margin-left: -2em;
+          font-family: 'Fontawesome';
+          font-size: 22px;
+          content: "\f075";
+          color: rgba($grey, 0.5);
+          @include breakpoint($iphone) {
+            font-size: 18px;
+            font-weight: normal;
+            padding-top: 4px;
+          } //breakpoint($laptop)
+        } //&:before
+      } //li
+    } //ul
+  } //.widget_recent_comments
+
+  .widget_recent_entries {
+    ul {
+      margin-top: 1em;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+      li {
+        position: relative;
+        padding: 0px 0px 1em 50px;
+        margin-bottom: 2em;
+        border-bottom: 1px solid #C3C3C3;
+        &:last-child {
+          margin-bottom: 0px;
+          border-bottom: none;
+          padding-bottom: 0px;
+        } //&:last-child
+        a {
+          display: block;
+          @include font-size(1.1);
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          } //&:hover, &:focus
+        } //a
+        &:before {
+          display: block;
+          float: left;
+          padding-top: 0.3em;
+          margin-left: -2em;
+          font-family: 'Fontawesome';
+          font-size: 22px;
+          content: "\f036";
+          color: rgba($grey, 0.5);
+          @include breakpoint($iphone) {
+            font-size: 18px;
+            font-weight: normal;
+            padding-top: 4px;
+          } //breakpoint($laptop)
+        } //&:before
+      } //li
+    }
+  } //.widget_recent_entries
+
+
+} //secondary
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

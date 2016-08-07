@@ -1,0 +1,148 @@
+.site-header {
+  position: relative;
+  min-height: 40px;
+  @include breakpoint($iphone) {
+    min-height: 80px;
+  }
+  @include breakpoint($zona2) {
+    min-height: 80px;
+  }
+
+  @include back-image($backimage1);
+  // SITE LOGO
+  .site-logo {
+    position: relative;
+    a {
+      position: absolute;
+      z-index: 10;
+      top: 0.5em;
+      left: 0.5em;
+      display: block;
+      width: 2em;
+      height: 2em;
+      background: #000000;
+      border: 2px solid #FFFFFF;
+      color: #FFFFFF;
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        outline: 2px solid #FFFFFF;
+      } //&:hover, &:focus
+      &:hover .site-firstletter,
+      &:focus .site-firstletter {
+        background: #FFFFFF;
+        color: #000000;
+        font-weight: 500;
+      }
+      .site-firstletter {
+        font-family: $font__main;
+        font-size: 1.5em;
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.3em;
+      }
+    } //a
+  } //.site-logo
+
+  //SITE BRANDING
+  .site-branding {
+    text-align: center;
+    overflow: hidden;
+    .site-title {
+      margin: 0px;
+      font-family: $font__main;
+      @include font-size(2);
+      font-weight: 300;
+      text-transform: uppercase;
+      line-height: 1.5;
+      word-break: break-word;
+      &::after {
+        display: block;
+        content: "";
+        margin: 0px auto;
+        width: 3em;
+        border-bottom: 1px solid rgba(50, 50, 50, 0.7);
+        opacity: 0.8;
+      }
+      @include breakpoint($iphone) {
+        @include font-size(1.6);
+      } //breakpoint($iphone)
+      a {
+        text-decoration: none;
+        color: inherit;
+        &:hover,
+        &:focus {
+          color: inherit;
+        } //&:hover, &:focus
+      } //a
+    } //.site-title
+    .site-description {
+      margin: 0px;
+      line-height: 1.5;
+      word-break: break-word;
+      @include font-size(1.1);
+    } //.site-description
+  } //.site-branding
+
+  //MENU-TOGGLE
+  .menu-toggle {
+    position: fixed;
+    z-index: 100;
+    top: 0.5em;
+    right: 0.5em;
+    background-color: transparent;
+    border: 1px solid #D1D1D1;
+    color: #1A1A1A;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 1.0769223077em 0px;
+    padding: 0.769230769em;
+    @include single-transition();
+    @include transition-duration(0.4s);
+    @include breakpoint($iphone) {
+      font-size: 16px;
+      margin: 0px;
+      //padding: 0.8125em 0.875em 0.6875em;
+    } //breakpoint($zona1)
+    &:hover {
+      background-color: transparent;
+      border-color: #007ACC;
+      color: #007ACC;
+    }
+    &:focus {
+      background-color: transparent;
+      /*border-color: #007ACC;*/
+      color: #007ACC;
+    } //&:hover, &:focus
+    &.toggled-on {
+      background-color: #1A1A1A;
+      border-color: #1A1A1A;
+      color: #FFFFFF;
+      &:hover {
+        outline: thin dotted #FFF;
+        background-color: #1A1A1A;
+        color: #FFFFFF;
+      }
+      &:focus {
+        outline: thin dotted #FFF;
+        background-color: #1A1A1A;
+        color: #FFFFFF;
+      } //&:hover, &:focus
+      &:focus {
+      }
+      &.hide {
+        top: 0.5em;
+      }
+    } //&.toggled-on
+    &:focus {
+      outline: 0;
+    }
+    &.hide {
+      top: -3.5em;
+    }
+  } //.menu-toggle
+} //.site-header
+
+.no-js .menu-toggle {
+  display: none;
+}

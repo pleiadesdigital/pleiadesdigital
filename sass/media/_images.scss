@@ -1,0 +1,47 @@
+.featured-image {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  img {
+    display: block;
+    margin: 0px auto;
+  } //img
+  @include breakpoint($iphone) {
+    //border: 2px dashed royalblue;
+  } //breakpoint($iphone)
+  @include breakpoint($tablet) {
+    //border: 2px dashed palevioletred;
+  } //breakpoint($tablet)
+  @include breakpoint($laptop) {
+    //border: 2px dashed rebeccapurple;
+  } //breakpoint($iphone)
+  @include breakpoint($desktop) {
+    //border: 2px dashed darkblue;
+  } //breakpoint($iphone)
+} //.featured-image
+
+.featured-image-index {
+  margin-top: 1em;
+  margin-bottom: 0px;
+  @include breakpoint($iphone) {
+    //border: 2px dashed royalblue;
+  } //breakpoint($iphone)
+  @include breakpoint($tablet) {
+    //border: 2px dashed palevioletred;
+  } //breakpoint($tablet)
+  @include breakpoint($laptop) {
+    //border: 2px dashed rebeccapurple;
+  } //breakpoint($iphone)
+  @include breakpoint($desktop) {
+    //border: 2px dashed darkblue;
+  } //breakpoint($iphone)
+  a{
+    img {
+      display: block;
+      margin: 0px auto;
+    } //img
+    &:hover img,
+    &:focus img {
+      outline: 2px dotted darkmagenta;
+    }
+  } //a
+} //.featured-image

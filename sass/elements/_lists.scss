@@ -1,0 +1,25 @@
+ul, ol {
+	margin: 0px 0px 1.5em 1.5em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1em;
+}
+
+dt {
+	font-weight: 600;
+}
+
+dd {
+	margin: 0px 1.5em 1.5em;
+}
