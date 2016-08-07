@@ -234,8 +234,8 @@
         border-bottom: 1px dashed #C1C1C1;
         &:hover,
         &:focus {
-          color: darkmagenta;
-          border-bottom: 1px dashed darkmagenta;
+          color: $magentadark;
+          border-bottom: 1px dashed $magentadark;
         } //&:hover, &:focus
       } //a
       img {
@@ -265,7 +265,7 @@
           border: 1px solid #C3C3C3;
           &:hover,
           &:focus {
-            border-color: darkmagenta;
+            border-color: $magentadark;
           } //&:hover, &:focus
           &::after {
             content: "...";

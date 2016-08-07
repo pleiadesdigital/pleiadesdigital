@@ -1,5 +1,5 @@
 /*!
-Theme Name: Pleiades Digital
+Theme Name: Pleiades Web 2016
 Theme URI: http://pleiadesdigital.com/
 Author: Ronaldo Ortiz
 Author URI: http://www.pleiadesdigital.com
@@ -2536,8 +2536,8 @@ a:hover, a:active {
 }
 /* line 235, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-content a:hover, .site-main article .entry-content a:focus {
-  color: darkmagenta;
-  border-bottom: 1px dashed darkmagenta;
+  color: #610634;
+  border-bottom: 1px dashed #610634;
 }
 /* line 241, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-content img {
@@ -2574,7 +2574,7 @@ a:hover, a:active {
 }
 /* line 266, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-content .continue-reading a:hover, .site-main article .entry-content .continue-reading a:focus {
-  border-color: darkmagenta;
+  border-color: #610634;
 }
 /* line 270, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-content .continue-reading a::after {
