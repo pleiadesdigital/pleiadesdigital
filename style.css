@@ -2349,8 +2349,8 @@ a:hover, a:active {
 }
 /* line 93, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-header .entry-title a:hover, .site-main article .entry-header .entry-title a:focus {
-  color: darkmagenta;
-  border-bottom: 1px dashed darkmagenta;
+  color: #610634;
+  border-bottom: 1px dashed #610634;
 }
 /* line 106, sass/site/primary/_posts-and-pages.scss */
 .site-main article .entry-header .entry-meta {

@@ -92,8 +92,8 @@
           position: relative;
           &:hover,
           &:focus {
-            color: darkmagenta;
-            border-bottom: 1px dashed darkmagenta;
+            color: $magentadark;
+            border-bottom: 1px dashed $magentadark;
           } // &:hover, &:focus
         } //a
         //INDEXES
