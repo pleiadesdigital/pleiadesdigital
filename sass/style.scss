@@ -67,6 +67,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "normalize";
 
 /*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+@import "layout/frontpage";
+/*@import "layout/canvasfree";
+@import "layout/showroom";
+@import "layout/testing";
+@import "layout/blog";
+@import "layout/404";*/
+
+/*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 @import "typography/typography";
@@ -120,3 +130,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/*--------------------------------------------------------------
+# WooCommerce
+--------------------------------------------------------------*/
+@import "woocommerce/global";

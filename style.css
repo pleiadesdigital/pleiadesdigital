@@ -364,6 +364,27 @@ th {
 }
 
 /*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+/* line 1, sass/layout/_frontpage.scss */
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 8, sass/layout/_frontpage.scss */
+.content-area {
+  border: 3px dashed mediumpurple;
+  min-height: 500px;
+}
+
+/*@import "layout/canvasfree";
+@import "layout/showroom";
+@import "layout/testing";
+@import "layout/blog";
+@import "layout/404";*/
+/*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 /* line 1, sass/typography/_typography.scss */
@@ -3088,4 +3109,17 @@ object {
 /* line 65, sass/media/_galleries.scss */
 .gallery-caption {
   display: block;
+}
+
+/*--------------------------------------------------------------
+# WooCommerce
+--------------------------------------------------------------*/
+/* line 1, sass/woocommerce/_global.scss */
+.woocommerce {
+  border: 2px dashed orangered;
+}
+/* line 3, sass/woocommerce/_global.scss */
+.woocommerce .site-content {
+  border: 3px dashed mediumpurple;
+  padding: 1em 3em 2em;
 }

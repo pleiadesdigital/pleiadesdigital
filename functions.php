@@ -47,10 +47,10 @@ if (!function_exists('pleiadesweb16_setup')) :
     ));
 
     // Set up the WordPress core custom background feature.
-    add_theme_support('custom-background', apply_filters('pleiadesweb16_custom_background_args', array(
+    /*add_theme_support('custom-background', apply_filters('pleiadesweb16_custom_background_args', array(
       'default-color' => 'FFFFFF',
       'default-image' => '',
-    )));
+    )));*/
 
   } //function pleiadesweb16_setup()
 
@@ -81,6 +81,11 @@ add_action('widgets_init', 'pleiadesweb16_widgets_init');
 function pleiadesweb16_scripts() {
 
   wp_enqueue_style('pleiadesweb16-style', get_stylesheet_uri());
+
+/*  if (is_single()) {
+
+  }*/
+
 
   // FONTS
   // Google fonts
@@ -141,3 +146,28 @@ require get_template_directory() . '/inc/customizer.php';
 
 // Load Jetpack compatibility file.
 require get_template_directory() . '/inc/jetpack.php';
+
+
+//WOOCOMMERCE STUFF
+
+add_action('after_setup_theme', 'woocommerce_support');
+function woocommerce_support() {
+  add_theme_support('woocommerce');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
