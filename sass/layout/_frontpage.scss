@@ -40,27 +40,50 @@ body {
   min-height: 500px;
   background: #FFFFFF;
 
+  .front-left,
+  .front-right {
+    width: 100%;
+    float: none;
+    padding: 0px;
+  }
+  @include breakpoint(min-width 750px) {
+    .front-left {
+      width: 50%;
+      float: left;
+      padding-right: 4rem;
+    } //.front-left
+    .front-right {
+      width: 50%;
+      float: right;
+        padding-left: 4rem;
+    } //.front-right
+  }
+
   // Call to action
   #call-to-action {
     color: #FFFFFF;
     background: rebeccapurple;
-    padding: 4em 0px;
+    padding: 1em 0px;
+    @include clearfix();
+    h2 {
+      text-align: center;
+    }
   } //#call-to-action
 
   // Testimonials
   #testimonials {
-    padding: 4em 0px;
+    padding: 1em 0px;
     background: $greylight;
   } //#testimonials
 
   // Services
   #services {
-    padding: 4rem 0px;
+    padding: 1rem 0px;
   } //#services
 
   // Meet the doctor
   #meet {
-    padding-top: 4rem;
+    padding-top: 1rem;
     padding-bottom: 6rem;
     color: #FFFFFF;
     background-color: #00497A;
@@ -68,8 +91,11 @@ body {
 
   // Contact
   #contact {
-    padding: 4rem 0px;
-  }
+    padding: 1rem 0px;
+    h2 {
+      text-align: center;
+    } //h2
+  } //#contact
 
 } //.content-area
 
